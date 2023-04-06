@@ -70,7 +70,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Comming Soon...
+- [Live Demo](https://santosh-konappanavar.github.io/bookstoreUsing-react/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
