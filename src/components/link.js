@@ -1,5 +1,5 @@
 const links = [
-  { path: '/', text: 'home' },
+  { path: '/', text: 'Books ' },
   { path: 'categories', text: 'categories' },
 ];
 
