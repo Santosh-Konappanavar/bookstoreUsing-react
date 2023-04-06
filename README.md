@@ -30,7 +30,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Awesome Books <a name="about-project"></a>
+# 📖 Books Store <a name="about-project"></a>
 
 **Awesome Books** is a webpage that works nearly like a library. You can easily add books and maintain a list, also you can remove it whenever not required a book.
 
