@@ -32,7 +32,7 @@
 
 # 📖 Books Store <a name="about-project"></a>
 
-**Awesome Books** is a webpage that works nearly like a library. You can easily add books and maintain a list, also you can remove it whenever not required a book.
+**Books Store** is a webpage that works nearly like a library. You can easily add books and maintain a list, also you can remove it whenever not required a book.
 
 ## 🛠 Built With <a name="built-with"></a>
 
