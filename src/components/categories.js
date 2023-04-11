@@ -7,8 +7,9 @@ const Category = () => {
   return (
     <div>
       <h2>Category</h2>
+      <button type="button">check status</button>
       {categories.map((category) => (
-        <p key={category.id}>{category.name}</p>
+        <p key={category.item_id}>{category.name}</p>
       ))}
     </div>
   );
