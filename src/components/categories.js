@@ -1,19 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-const Categary = () => {
-  const [status, setStatus] = useState('inactive');
-  const handlingstaus = () => {
-    setStatus('active');
-  };
+const Category = () => {
+  const category = useSelector((state) => state.categories);
   return (
     <div>
-      <p>
-        Status:
-        {' '}
-        {status}
-      </p>
-      <button type="button" onClick={handlingstaus}>Check status</button>
+      <h2>Category</h2>
+      <p>{category}</p>
     </div>
   );
 };
-export default Categary;
+
+export default Category;
