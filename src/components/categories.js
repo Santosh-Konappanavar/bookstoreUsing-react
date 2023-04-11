@@ -2,11 +2,14 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 const Category = () => {
-  const category = useSelector((state) => state.categories);
+  const categories = useSelector((state) => state.categories.categories);
+
   return (
     <div>
       <h2>Category</h2>
-      <p>{category}</p>
+      {categories.map((category) => (
+        <p key={category.id}>{category.name}</p>
+      ))}
     </div>
   );
 };
