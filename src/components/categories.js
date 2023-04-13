@@ -6,8 +6,7 @@ const Category = () => {
 
   return (
     <div>
-      <h2>Category</h2>
-      <button type="button">check status</button>
+      <button type="button" className="checkbtn">check status</button>
       {categories.map((category) => (
         <p key={category.item_id}>{category.name}</p>
       ))}

@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBookAsync } from '../redux/books/booksSlice';
-import BooksList from './allbooks';
 
 const AddBookForm = () => {
   const [title, setTitle] = useState('');
@@ -22,8 +21,8 @@ const AddBookForm = () => {
   };
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <div>
+      <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
           placeholder="Book title"
@@ -36,10 +35,9 @@ const AddBookForm = () => {
           value={author}
           onChange={(e) => setAuthor(e.target.value)}
         />
-        <button type="submit">Add Book</button>
+        <button type="submit" className="submitbtn">Add Book</button>
       </form>
-      <BooksList />
-    </>
+    </div>
   );
 };
 
