@@ -1,32 +1,49 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/booksSlice';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBooksAsync, removeBookAsync } from '../redux/books/booksSlice';
 
-const Book = () => {
-  const books = useSelector((state) => state.books);
+const BooksList = () => {
   const dispatch = useDispatch();
+  const { books, status, error } = useSelector((state) => state.books);
 
-  const handleRemove = (itemId) => {
-    dispatch(removeBook(itemId));
+  const handleRemove = async (bookId) => {
+    await dispatch(removeBookAsync(bookId));
   };
 
-  return (
-    <div>
-      <ul className="books">
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchBooksAsync());
+    }
+  }, [status, dispatch]);
+
+  let content;
+
+  if (status === 'loading') {
+    content = <div>Loading...</div>;
+  } else if (status === 'succeeded') {
+    content = (
+      <div>
         {books.map((book) => (
-          <li key={book.item_id}>
-            <h3>{book.title}</h3>
+          <div key={book.id}>
             <p>
-              Author:
-              {' '}
+              <strong>Title: </strong>
+              {book.title}
+            </p>
+            <p>
+              <strong>Author: </strong>
               {book.author}
             </p>
-            <button type="button" onClick={() => handleRemove(book.item_id)}>Remove</button>
-          </li>
+            <button type="button" onClick={() => handleRemove(book.id)}>
+              Remove
+            </button>
+          </div>
         ))}
-      </ul>
-    </div>
-  );
-};
+      </div>
+    );
+  } else if (status === 'failed') {
+    content = <div>{error}</div>;
+  }
 
-export default Book;
+  return <div>{content}</div>;
+};
+export default BooksList;
