@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: #fafafa;
+  width: 90%;
+  margin: 10% auto;
+  border-radius: 4px;
+  box-shadow: 14px 17px 32px 5px rgba(0, 0, 0, 0.21);
 }
 
 .App-logo {
@@ -7,17 +12,37 @@
   pointer-events: none;
 }
 
-.header {
+.flex {
   display: flex;
   justify-content: space-between;
-  margin: 0 5rem;
   align-items: center;
+}
+
+.header {
+  border: 2px solid #fafafa;
+  height: 3.5rem;
+  background-color: #ffff;
+}
+
+.header1 > h2,
+.login {
+  margin: 0 2rem;
+}
+
+.header1 {
+  color: #0290ff;
 }
 
 .links {
   display: flex;
   list-style: none;
   gap: 1.5rem;
+  text-decoration: none;
+}
+
+.links li a {
+  color: #121212;
+  text-decoration: none;
 }
 
 .books {
@@ -25,10 +50,173 @@
   margin: 2% auto;
 }
 
+.login {
+  border: 1.5px solid #e8e8e8;
+  border-radius: 5rem;
+  padding: 0.7rem;
+}
+
+.loginicon {
+  color: #0290ff;
+}
+
+.books_container {
+  text-align: left;
+  background-color: #ffff;
+  border: 1px solid #e8e8e8;
+  margin-top: 1rem;
+  border-radius: 1px;
+  box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.books_detail1 {
+  margin-top: -15px;
+  margin-left: 1rem;
+}
+
+.books_detail2 {
+  margin-top: -3px;
+  font-size: 0.875rem;
+  color: #848484;
+  margin-left: 1rem;
+}
+
+.chapter {
+  color: #848484;
+  font-size: 0.813rem;
+}
+
+.lessonnumber {
+  color: #282c34;
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: -10px;
+}
+
+.hr {
+  margin-top: 2rem;
+  border: 1px solid #e8e8e8;
+}
+
+.updatebtn,
+.checkbtn {
+  width: 11.5rem;
+  border: none;
+  height: 2.063rem;
+  background-color: #0290ff;
+  border-radius: 3px;
+  color: #ffff;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.chapters {
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.progress {
+  gap: 20px;
+}
+
+.percent1 {
+  margin-top: -33px;
+}
+
+.percent {
+  font-size: 2rem;
+  color: #121212;
+}
+
+.completed {
+  color: gray;
+  margin-top: -35px;
+}
+
+.progressoval {
+  width: 4rem;
+  height: 4rem;
+}
+
+.line2 {
+  height: 100px;
+  width: 1px;
+  background-color: #e8e8e8;
+}
+
+.books_detail3 {
+  color: #0290ff;
+}
+
+.remove {
+  color: #0290ff;
+  gap: 10px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  margin-top: -30px;
+  margin-left: 1rem;
+}
+
+.remove > button {
+  border: none;
+  background-color: #ffff;
+  outline: none;
+  color: #0290ff;
+  cursor: pointer;
+}
+
+.form > input::placeholder {
+  color: #c4c4c4;
+}
+
+.line {
+  width: 1.5px;
+  height: 20px;
+  background-color: #e8e8e8;
+}
+
+.addbook {
+  width: 92.5%;
+  margin: auto;
+}
+
+.addbook > h4 {
+  color: #888;
+  text-align: left;
+  margin-bottom: 0.5%;
+}
+
+.form {
+  padding: 0 1.5rem 5rem 0.5rem;
+}
+
+.form input {
+  border: 2px solid #e8e8e8;
+  height: 2rem;
+  border-radius: 4px;
+  background-color: #ffff;
+  outline: none;
+}
+
+.form :nth-child(1) {
+  width: 50%;
+}
+
+.form :nth-child(2) {
+  width: 30%;
+}
+
+.submitbtn {
+  width: 15%;
+  border: none;
+  height: 2.3rem;
+  background-color: #0290ff;
+  color: white;
+}
+
 .links li a:hover,
 .links li a.active {
-  color: red;
-  text-decoration: none;
+  color: gray;
 }
 
 @media (prefers-reduced-motion: no-preference) {

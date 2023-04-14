@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
 import { fetchBooksAsync, removeBookAsync } from '../redux/books/booksSlice';
+import 'react-circular-progressbar/dist/styles.css';
 
 const BooksList = () => {
   const dispatch = useDispatch();
@@ -23,19 +25,51 @@ const BooksList = () => {
   } else if (status === 'succeeded') {
     content = (
       <div>
-        {books.map((book) => (
-          <div key={book.id}>
-            <p>
-              <strong>Title: </strong>
-              {book.title}
-            </p>
-            <p>
-              <strong>Author: </strong>
-              {book.author}
-            </p>
-            <button type="button" onClick={() => handleRemove(book.id)}>
-              Remove
-            </button>
+        {books && books.map((book) => (
+          <div key={book.id} className="books_container flex">
+            <div className="booksname">
+              <div className="books_detail">
+                <p className="books_detail2">Action</p>
+                <p className="books_detail1">
+                  <strong>{book.title}</strong>
+                </p>
+                <p className="books_detail1 books_detail3">
+                  {book.author}
+                </p>
+              </div>
+              <div className="remove flex">
+                <p>Comments</p>
+                <div className="line" />
+                <button type="button" onClick={() => handleRemove(book.id)}>
+                  Remove
+                </button>
+                <div className="line" />
+                <p>Edit</p>
+              </div>
+            </div>
+            <div className="progress flex">
+              <div className="progress_container">
+                <CircularProgressbar className="progressoval" value={Math.floor(Math.random() * (99 - 0)) + 0} />
+              </div>
+              <div className="percent1">
+                <p className="percent">
+                  {Math.floor(Math.random() * (99 - 0)) + 0}
+                  %
+                </p>
+                <p className="completed">Completed</p>
+              </div>
+            </div>
+            <div className="line2" />
+            <div className="chapters">
+              <p className="chapter">CURRENT CHAPTER</p>
+              <p className="lessonnumber">
+                Chapter
+                {' '}
+                {Math.floor(Math.random() * (99 - 0)) + 0}
+                {' '}
+              </p>
+              <button className="updatebtn" type="button">UPDATE PROGRESS</button>
+            </div>
           </div>
         ))}
       </div>

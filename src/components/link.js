@@ -1,6 +1,6 @@
 const links = [
-  { path: '/', text: 'Books ' },
-  { path: 'categories', text: 'categories' },
+  { path: '/', text: 'BOOKS ' },
+  { path: 'categories', text: 'CATEGORIES' },
 ];
 
 export default links;
