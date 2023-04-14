@@ -26,7 +26,7 @@ const BooksList = () => {
     content = (
       <div>
         {books && books.map((book) => (
-          <div key={book.id} className="books_container">
+          <div key={book.id} className="books_container flex">
             <div className="booksname">
               <div className="books_detail">
                 <p className="books_detail2">Action</p>
@@ -37,7 +37,7 @@ const BooksList = () => {
                   {book.author}
                 </p>
               </div>
-              <div className="remove">
+              <div className="remove flex">
                 <p>Comments</p>
                 <div className="line" />
                 <button type="button" onClick={() => handleRemove(book.id)}>
@@ -47,7 +47,7 @@ const BooksList = () => {
                 <p>Edit</p>
               </div>
             </div>
-            <div className="progress">
+            <div className="progress flex">
               <div className="progress_container">
                 <CircularProgressbar className="progressoval" value={Math.floor(Math.random() * (99 - 0)) + 0} />
               </div>

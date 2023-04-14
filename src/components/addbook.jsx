@@ -22,7 +22,7 @@ const AddBookForm = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="form flex">
         <input
           type="text"
           placeholder="Book title"

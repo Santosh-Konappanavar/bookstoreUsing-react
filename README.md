@@ -106,7 +106,7 @@ npm start
 
 To run tests, run the following command: 
 
-npx hint . and npx stylelint "\*_/_.{css,scss}" , npx eslint . and npm test
+npx hint . and npx stylelint "**/*.{css,scss}" , npx eslint "**/*.{js,jsx}" and npm test
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

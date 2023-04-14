@@ -4,8 +4,8 @@ import Navbar from './navbar';
 
 export default function Header() {
   return (
-    <div className="header">
-      <div className="header1">
+    <div className="header flex">
+      <div className="header1 flex">
         <h2>Bookstore CMS</h2>
         <Navbar />
       </div>
